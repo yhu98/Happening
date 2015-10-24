@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A66EBD2CA0247D76C26A4E9 /* libPods-Happening.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DF4C7597B00C65FB4ACB2D14 /* libPods-Happening.a */; };
 		C32C0EAB1BDB68C7005F3A8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C0EAA1BDB68C7005F3A8D /* AppDelegate.swift */; };
 		C32C0EAD1BDB68C7005F3A8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C0EAC1BDB68C7005F3A8D /* ViewController.swift */; };
 		C32C0EB01BDB68C7005F3A8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32C0EAE1BDB68C7005F3A8D /* Main.storyboard */; };
 		C32C0EB31BDB68C7005F3A8D /* Happening.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C32C0EB11BDB68C7005F3A8D /* Happening.xcdatamodeld */; };
 		C32C0EB51BDB68C7005F3A8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C32C0EB41BDB68C7005F3A8D /* Assets.xcassets */; };
 		C32C0EB81BDB68C7005F3A8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32C0EB61BDB68C7005F3A8D /* LaunchScreen.storyboard */; };
+		D200BF6632CBD6F9299A193E /* Pods_Happening.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E0F4E5F69D0C3A5BF164E4 /* Pods_Happening.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E5ADED0B726EAB73A7C4406 /* Pods-Happening.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happening.release.xcconfig"; path = "Pods/Target Support Files/Pods-Happening/Pods-Happening.release.xcconfig"; sourceTree = "<group>"; };
 		51C4F115139E14F96AD75470 /* Pods-Happening.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happening.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Happening/Pods-Happening.debug.xcconfig"; sourceTree = "<group>"; };
+		87E0F4E5F69D0C3A5BF164E4 /* Pods_Happening.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happening.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32C0EA71BDB68C7005F3A8D /* Happening.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happening.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32C0EAA1BDB68C7005F3A8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C32C0EAC1BDB68C7005F3A8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		C32C0EB41BDB68C7005F3A8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C32C0EB71BDB68C7005F3A8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C32C0EB91BDB68C7005F3A8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF4C7597B00C65FB4ACB2D14 /* libPods-Happening.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Happening.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A66EBD2CA0247D76C26A4E9 /* libPods-Happening.a in Frameworks */,
+				D200BF6632CBD6F9299A193E /* Pods_Happening.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,7 +45,7 @@
 		A61E3749C3D0332F6EC05C4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DF4C7597B00C65FB4ACB2D14 /* libPods-Happening.a */,
+				87E0F4E5F69D0C3A5BF164E4 /* Pods_Happening.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -327,6 +327,10 @@
 			baseConfigurationReference = 51C4F115139E14F96AD75470 /* Pods-Happening.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Happening/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TeamAwesomeHackingEDU.Happening;
@@ -339,6 +343,10 @@
 			baseConfigurationReference = 4E5ADED0B726EAB73A7C4406 /* Pods-Happening.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Happening/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TeamAwesomeHackingEDU.Happening;
