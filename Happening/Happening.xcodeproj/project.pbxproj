@@ -13,7 +13,11 @@
 		C32C0EB31BDB68C7005F3A8D /* Happening.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C32C0EB11BDB68C7005F3A8D /* Happening.xcdatamodeld */; };
 		C32C0EB51BDB68C7005F3A8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C32C0EB41BDB68C7005F3A8D /* Assets.xcassets */; };
 		C32C0EB81BDB68C7005F3A8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32C0EB61BDB68C7005F3A8D /* LaunchScreen.storyboard */; };
+
+		CA27B9C11BDBFFA9001F3202 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27B9C01BDBFFA9001F3202 /* TableViewCell.swift */; };
+
 		D200BF6632CBD6F9299A193E /* Pods_Happening.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E0F4E5F69D0C3A5BF164E4 /* Pods_Happening.framework */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		C32C0EB41BDB68C7005F3A8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C32C0EB71BDB68C7005F3A8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C32C0EB91BDB68C7005F3A8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+
+		CA27B9C01BDBFFA9001F3202 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		DF4C7597B00C65FB4ACB2D14 /* libPods-Happening.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Happening.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 				C32C0EB61BDB68C7005F3A8D /* LaunchScreen.storyboard */,
 				C32C0EB91BDB68C7005F3A8D /* Info.plist */,
 				C32C0EB11BDB68C7005F3A8D /* Happening.xcdatamodeld */,
+				CA27B9C01BDBFFA9001F3202 /* TableViewCell.swift */,
 			);
 			path = Happening;
 			sourceTree = "<group>";
@@ -214,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32C0EAD1BDB68C7005F3A8D /* ViewController.swift in Sources */,
+				CA27B9C11BDBFFA9001F3202 /* TableViewCell.swift in Sources */,
 				C32C0EB31BDB68C7005F3A8D /* Happening.xcdatamodeld in Sources */,
 				C32C0EAB1BDB68C7005F3A8D /* AppDelegate.swift in Sources */,
 			);
