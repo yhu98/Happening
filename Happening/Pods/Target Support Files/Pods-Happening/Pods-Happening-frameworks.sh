@@ -82,3 +82,14 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Happening/Bolts.framework"
+  install_framework "Pods-Happening/Parse.framework"
+  install_framework "Pods-Happening/ParseUI.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Happening/Bolts.framework"
+  install_framework "Pods-Happening/Parse.framework"
+  install_framework "Pods-Happening/ParseUI.framework"
+fi
