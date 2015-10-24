@@ -39,6 +39,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yr0-Dt-MTE">
                                 <rect key="frame" x="481" y="205" width="51" height="31"/>
                                 <animations/>
+                                <connections>
+                                    <action selector="didToggleStatusSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="mMr-r7-k9W"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have an idea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zov-qy-8eo">
                                 <rect key="frame" x="70" y="264" width="100" height="20.5"/>
@@ -53,6 +56,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBh-e1-9pr">
                                 <rect key="frame" x="481" y="259" width="51" height="31"/>
                                 <animations/>
+                                <connections>
+                                    <action selector="didToggleIdeaSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="4L0-Bq-DYb"/>
+                                </connections>
                             </switch>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="8sV-5d-F6L">
                                 <rect key="frame" x="30" y="304" width="540" height="96"/>
@@ -108,6 +114,14 @@
                                 </constraints>
                                 <state key="normal" title="Done"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbl-1b-yVw">
+                                <rect key="frame" x="30" y="30" width="52" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="didPressLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ltb-XN-5BU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -126,14 +140,18 @@
                             <constraint firstItem="cDB-YS-KAW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aI3-UA-pnL"/>
                             <constraint firstItem="ktF-G3-7wj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="190" id="arx-pi-7fe"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8sV-5d-F6L" secondAttribute="bottom" constant="150" id="dz6-sE-Ri9"/>
+                            <constraint firstItem="Nbl-1b-yVw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="iON-Yt-xvz"/>
                             <constraint firstItem="ktF-G3-7wj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="iu6-Xo-5Gs"/>
+                            <constraint firstItem="Nbl-1b-yVw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="lvt-Ma-gik"/>
                             <constraint firstItem="cDB-YS-KAW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ppo-uR-lft"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4cA-L6-91M" secondAttribute="bottom" constant="59" id="sl3-kA-ySo"/>
                             <constraint firstItem="cDB-YS-KAW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="uBW-IN-SDc"/>
                             <constraint firstItem="Yr0-Dt-MTE" firstAttribute="centerY" secondItem="ktF-G3-7wj" secondAttribute="centerY" id="wTq-is-mkC"/>
+                            <constraint firstItem="Nbl-1b-yVw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="z96-f2-Ns0"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="lvt-Ma-gik"/>
                                 <exclude reference="iu6-Xo-5Gs"/>
                                 <exclude reference="Whq-jM-rZ6"/>
                             </mask>
