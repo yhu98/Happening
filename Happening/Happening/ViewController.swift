@@ -56,7 +56,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate  {
         let user = PFUser()
         user.setObject(false, forKey: "activeStatus")
         user.setObject(false, forKey: "hasIdea")
-        user.setObject(<#T##object: AnyObject##AnyObject#>, forKey: <#T##String#>)
     }
     
     override func didReceiveMemoryWarning() {
