@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
-    <elements/>
+    <entity name="Skill" syncable="YES">
+        <attribute name="skill" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="user" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="mySkills" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" syncable="YES">
+        <attribute name="idea" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="mySkills" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Skill" inverseName="user" inverseEntity="Skill" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="User" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="Skill" positionX="-36" positionY="9" width="128" height="75"/>
+    </elements>
 </model>
