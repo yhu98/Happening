@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C30DE54B1BDBEDC500A89477 /* MyLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30DE54A1BDBEDC500A89477 /* MyLogInViewController.swift */; };
 		C32C0EAB1BDB68C7005F3A8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C0EAA1BDB68C7005F3A8D /* AppDelegate.swift */; };
 		C32C0EAD1BDB68C7005F3A8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32C0EAC1BDB68C7005F3A8D /* ViewController.swift */; };
 		C32C0EB01BDB68C7005F3A8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32C0EAE1BDB68C7005F3A8D /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		4E5ADED0B726EAB73A7C4406 /* Pods-Happening.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happening.release.xcconfig"; path = "Pods/Target Support Files/Pods-Happening/Pods-Happening.release.xcconfig"; sourceTree = "<group>"; };
 		51C4F115139E14F96AD75470 /* Pods-Happening.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Happening.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Happening/Pods-Happening.debug.xcconfig"; sourceTree = "<group>"; };
 		87E0F4E5F69D0C3A5BF164E4 /* Pods_Happening.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Happening.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C30DE54A1BDBEDC500A89477 /* MyLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLogInViewController.swift; sourceTree = "<group>"; };
 		C32C0EA71BDB68C7005F3A8D /* Happening.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happening.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C32C0EAA1BDB68C7005F3A8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C32C0EAC1BDB68C7005F3A8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				C32C0EAA1BDB68C7005F3A8D /* AppDelegate.swift */,
 				C32C0EAC1BDB68C7005F3A8D /* ViewController.swift */,
+				C30DE54A1BDBEDC500A89477 /* MyLogInViewController.swift */,
 				C32C0EAE1BDB68C7005F3A8D /* Main.storyboard */,
 				C32C0EB41BDB68C7005F3A8D /* Assets.xcassets */,
 				C32C0EB61BDB68C7005F3A8D /* LaunchScreen.storyboard */,
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30DE54B1BDBEDC500A89477 /* MyLogInViewController.swift in Sources */,
 				C32C0EAD1BDB68C7005F3A8D /* ViewController.swift in Sources */,
 				CA27B9C11BDBFFA9001F3202 /* TableViewCell.swift in Sources */,
 				C32C0EB31BDB68C7005F3A8D /* Happening.xcdatamodeld in Sources */,
