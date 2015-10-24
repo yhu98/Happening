@@ -21,7 +21,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
+
         // Do any additional setup after loading the view, typically from a nib.
         objects.append("iOS")
         objects.append("Android")
@@ -29,7 +29,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate  {
         objects.append("Hardware")
         objects.append("Gaming")
         
-=======
+
         
     }
     
@@ -38,7 +38,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate  {
         logInController.delegate = self
         self.presentViewController(logInController, animated:true, completion: nil)
 
->>>>>>> TeamAwesomeHackingEDU/master
     }
 
     override func didReceiveMemoryWarning() {
