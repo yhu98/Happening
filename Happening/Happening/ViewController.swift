@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PFLogInViewControllerDelegate  {
 
 
     @IBOutlet weak var interestsTableView: UITableView!
@@ -19,6 +21,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         // Do any additional setup after loading the view, typically from a nib.
         objects.append("iOS")
         objects.append("Android")
@@ -26,6 +29,16 @@ class ViewController: UIViewController {
         objects.append("Hardware")
         objects.append("Gaming")
         
+=======
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let logInController = PFLogInViewController()
+        logInController.delegate = self
+        self.presentViewController(logInController, animated:true, completion: nil)
+
+>>>>>>> TeamAwesomeHackingEDU/master
     }
 
     override func didReceiveMemoryWarning() {
