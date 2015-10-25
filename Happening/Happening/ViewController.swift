@@ -37,23 +37,6 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         
     }
     
-    @IBAction func didToggleIdeaSwitch(sender: UISwitch) {
-        if sender.on == true {
-            PFUser.currentUser()?.setObject(true, forKey: "hasIdea")
-        } else {
-            PFUser.currentUser()?.setObject(false, forKey: "hasIdea")
-        }
-        PFUser.currentUser()?.saveEventually()
-    }
-    
-    @IBAction func didPressLogout(sender: UIButton) {
-        PFUser.logOut()
-        let logInController = PFLogInViewController()
-        logInController.delegate = self
-        logInController.signUpController?.delegate = self
-        self.presentViewController(logInController, animated:true, completion: nil)
-    }
-    
     @IBAction func didToggleActiveSwitch(sender: UISwitch) {
         if sender.on == true {
             PFUser.currentUser()?.setObject(true, forKey: "activeStatus")
@@ -64,6 +47,26 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         }
         PFUser.currentUser()?.saveEventually()
     }
+    
+    @IBAction func didToggleIdeaSwitch(sender: UISwitch) {
+        if sender.on == true {
+            PFUser.currentUser()?.setObject(true, forKey: "hasIdea")
+        } else {
+            PFUser.currentUser()?.setObject(false, forKey: "hasIdea")
+        }
+        PFUser.currentUser()?.saveEventually()
+    }
+    
+
+    @IBAction func didPressLogout(sender: UIBarButtonItem) {
+        PFUser.logOut()
+        let logInController = PFLogInViewController()
+        logInController.delegate = self
+        logInController.signUpController?.delegate = self
+        self.presentViewController(logInController, animated:true, completion: nil)
+    }
+    
+   
     
     
     override func viewDidAppear(animated: Bool) {
