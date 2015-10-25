@@ -72,11 +72,16 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     override func viewDidAppear(animated: Bool) {
         if (PFUser.currentUser() == nil) {
             let logInController = PFLogInViewController()
+//            logInController.fields = (PFLogInFields.UsernameAndPassword
+//                | PFLogInFields.Facebook
+//                | PFLogInFields.Twitter)
+//            logInController.facebookPermissions = [ "friends_about_me" ]
             logInController.delegate = self
             logInController.signUpController?.delegate = self
             self.presentViewController(logInController, animated:true, completion: nil)
         }
-        
+        usernameLabel.text = PFUser.currentUser()?.objectForKey("username") as? String
+    
         var currentActiveStatus: Bool? = PFUser.currentUser()?.objectForKey("activeStatus") as? Bool
         if currentActiveStatus == nil {
             PFUser.currentUser()?.setObject(true, forKey: "activeStatus")
