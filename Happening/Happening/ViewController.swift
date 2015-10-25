@@ -67,7 +67,12 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     }
     
    
-    
+    func manyToMany {
+        var skillsArray = NSMutableArray()
+        skillsArray.addObject(<#T##anObject: AnyObject##AnyObject#>)
+        PFUser.currentUser()?.setObject(skillsArray, forKey: "mySkills")
+        PFUser.currentUser()?.saveEventually()
+    }
     
     override func viewDidAppear(animated: Bool) {
         if (PFUser.currentUser() == nil) {
