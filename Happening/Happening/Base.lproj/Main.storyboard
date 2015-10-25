@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -20,6 +20,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cDB-YS-KAW">
                                 <rect key="frame" x="220" y="30" width="160" height="140"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="Npr-qq-CwS"/>
                                     <constraint firstAttribute="height" constant="140" id="ee0-fV-vve"/>
@@ -27,6 +28,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktF-G3-7wj">
                                 <rect key="frame" x="70" y="240" width="100" height="20.5"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="YIm-J4-UE1"/>
                                 </constraints>
@@ -36,9 +38,14 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yr0-Dt-MTE">
                                 <rect key="frame" x="481" y="235" width="51" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="didToggleActiveSwitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aEy-Ct-rcE"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have an idea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zov-qy-8eo">
                                 <rect key="frame" x="70" y="280" width="100" height="20.5"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="ean-eS-WbK"/>
                                 </constraints>
@@ -48,9 +55,14 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBh-e1-9pr">
                                 <rect key="frame" x="481" y="275" width="51" height="31"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="didToggleIdeaSwitch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WpH-PI-nuD"/>
+                                </connections>
                             </switch>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="59" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8sV-5d-F6L">
                                 <rect key="frame" x="40" y="320" width="530" height="230"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="interestsCell" rowHeight="59" id="A7e-fQ-LCA" customClass="TableViewCell" customModule="Happening" customModuleProvider="target">
@@ -62,6 +74,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PaS-E6-zNN">
                                                     <rect key="frame" x="23" y="9" width="40" height="40"/>
+                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="Xp8-2H-K7R"/>
                                                         <constraint firstAttribute="width" constant="40" id="uaR-Cv-Hig"/>
@@ -69,6 +82,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tW3-jC-PVD">
                                                     <rect key="frame" x="91" y="19" width="200" height="20"/>
+                                                    <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="4Qo-Ny-LAl"/>
                                                         <constraint firstAttribute="height" constant="20" id="Qrc-jR-4v6"/>
@@ -84,6 +98,7 @@
                                                     </variation>
                                                 </label>
                                             </subviews>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstItem="tW3-jC-PVD" firstAttribute="centerY" secondItem="PaS-E6-zNN" secondAttribute="centerY" id="6eg-8B-JY9"/>
                                                 <constraint firstItem="PaS-E6-zNN" firstAttribute="leading" secondItem="8b8-ey-x88" secondAttribute="leadingMargin" constant="19" id="8ym-wL-rOr"/>
@@ -103,6 +118,7 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <animations/>
                                         <connections>
                                             <outlet property="iconView" destination="PaS-E6-zNN" id="LAI-TI-Zrd"/>
                                             <outlet property="interestsLabel" destination="tW3-jC-PVD" id="JQg-Fk-18O"/>
@@ -116,6 +132,7 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cA-L6-91M">
                                 <rect key="frame" x="250" y="539" width="100" height="41"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="ZSx-4c-563"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="lj4-MW-be6"/>
@@ -130,6 +147,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USERNAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoV-5s-4ng">
                                 <rect key="frame" x="150" y="190" width="300" height="36"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="qXp-7U-5Dk"/>
                                     <constraint firstAttribute="width" constant="300" id="v5D-vM-mfi"/>
@@ -144,6 +162,7 @@
                                 </variation>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SBh-e1-9pr" firstAttribute="centerY" secondItem="Zov-qy-8eo" secondAttribute="centerY" id="0jv-I3-dcc"/>
@@ -181,7 +200,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="activeStatus" destination="Yr0-Dt-MTE" id="YQa-Tf-MK6"/>
+                        <outlet property="activeStatus" destination="Yr0-Dt-MTE" id="vhb-iP-3ay"/>
                         <outlet property="ideaStatus" destination="SBh-e1-9pr" id="luj-TZ-FTy"/>
                         <outlet property="interestsTableView" destination="8sV-5d-F6L" id="wkU-bo-YMW"/>
                         <outlet property="profileImage" destination="cDB-YS-KAW" id="0oT-jH-Kxi"/>
