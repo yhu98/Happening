@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import ParseUI
 
-class ViewController: UIViewController, PFLogInViewControllerDelegate  {
+class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate  {
 
 
     @IBOutlet weak var profileImage: UIImageView!
@@ -21,6 +21,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate  {
     @IBOutlet weak var doneButton: UIButton!
     
     var objects = [String]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +37,62 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate  {
         
     }
     
+    @IBAction func didToggleActiveSwitch(sender: UISwitch) {
+        if sender.on == true {
+            PFUser.currentUser()?.setObject(true, forKey: "activeStatus")
+            print("turn on")
+        }
+        else {
+            PFUser.currentUser()?.setObject(false, forKey: "activeStatus")
+        }
+        PFUser.currentUser()?.saveEventually()
+    }
+    
+    @IBAction func didToggleIdeaSwitch(sender: UISwitch) {
+        if sender.on == true {
+            PFUser.currentUser()?.setObject(true, forKey: "hasIdea")
+        } else {
+            PFUser.currentUser()?.setObject(false, forKey: "hasIdea")
+        }
+        PFUser.currentUser()?.saveEventually()
+    }
+    
+
+    @IBAction func didPressLogout(sender: UIBarButtonItem) {
+        PFUser.logOut()
+        let logInController = PFLogInViewController()
+        logInController.delegate = self
+        logInController.signUpController?.delegate = self
+        self.presentViewController(logInController, animated:true, completion: nil)
+    }
+    
+   
+    
+    
     override func viewDidAppear(animated: Bool) {
         if (PFUser.currentUser() == nil) {
             let logInController = PFLogInViewController()
             logInController.delegate = self
+            logInController.signUpController?.delegate = self
             self.presentViewController(logInController, animated:true, completion: nil)
         }
         
+        var currentActiveStatus: Bool? = PFUser.currentUser()?.objectForKey("activeStatus") as? Bool
+        if currentActiveStatus == nil {
+            PFUser.currentUser()?.setObject(true, forKey: "activeStatus")
+//            print("set nil to true")
+            currentActiveStatus = true
+            PFUser.currentUser()?.saveEventually()
+        }
+        activeStatus.setOn(currentActiveStatus!, animated: false)
+        
+        var currentIdeaStatus: Bool? = PFUser.currentUser()?.objectForKey("hasIdea") as? Bool
+        if currentIdeaStatus == nil {
+            PFUser.currentUser()?.setObject(true, forKey: "hasIdea")
+            currentIdeaStatus = true
+            PFUser.currentUser()?.saveEventually()
+        }
+        ideaStatus.setOn(currentIdeaStatus!, animated: false)
 
     }
     
@@ -53,13 +103,14 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate  {
     func logInViewControllerDidCancelLogIn(controller: PFLogInViewController) -> Void {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
+        self.dismissViewControllerAnimated(true, completion: nil)
 
-
-    func datamodel() {
-        let user = PFUser()
-        user.setObject(false, forKey: "activeStatus")
-        user.setObject(false, forKey: "hasIdea")
-        //user.setObject(<#T##object: AnyObject##AnyObject#>, forKey: <#T##String#>)
     }
     
     override func didReceiveMemoryWarning() {
