@@ -14,6 +14,8 @@
 		C32C0EB31BDB68C7005F3A8D /* Happening.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C32C0EB11BDB68C7005F3A8D /* Happening.xcdatamodeld */; };
 		C32C0EB51BDB68C7005F3A8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C32C0EB41BDB68C7005F3A8D /* Assets.xcassets */; };
 		CA27B9C11BDBFFA9001F3202 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27B9C01BDBFFA9001F3202 /* TableViewCell.swift */; };
+		CA27B9D91BDC4BFA001F3202 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA27B9D81BDC4BFA001F3202 /* MapViewController.swift */; };
+		CA27B9DB1BDC5073001F3202 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA27B9DA1BDC5073001F3202 /* CoreLocation.framework */; };
 		D200BF6632CBD6F9299A193E /* Pods_Happening.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E0F4E5F69D0C3A5BF164E4 /* Pods_Happening.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		C32C0EB41BDB68C7005F3A8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C32C0EB91BDB68C7005F3A8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA27B9C01BDBFFA9001F3202 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		CA27B9D81BDC4BFA001F3202 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CA27B9DA1BDC5073001F3202 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA27B9DB1BDC5073001F3202 /* CoreLocation.framework in Frameworks */,
 				D200BF6632CBD6F9299A193E /* Pods_Happening.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +52,7 @@
 		A61E3749C3D0332F6EC05C4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA27B9DA1BDC5073001F3202 /* CoreLocation.framework */,
 				87E0F4E5F69D0C3A5BF164E4 /* Pods_Happening.framework */,
 			);
 			name = Frameworks;
@@ -75,6 +81,7 @@
 			children = (
 				C32C0EAA1BDB68C7005F3A8D /* AppDelegate.swift */,
 				C32C0EAC1BDB68C7005F3A8D /* ViewController.swift */,
+				CA27B9D81BDC4BFA001F3202 /* MapViewController.swift */,
 				C30DE54A1BDBEDC500A89477 /* MyLogInViewController.swift */,
 				C32C0EB41BDB68C7005F3A8D /* Assets.xcassets */,
 				C32C0EAE1BDB68C7005F3A8D /* Main.storyboard */,
@@ -216,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C30DE54B1BDBEDC500A89477 /* MyLogInViewController.swift in Sources */,
+				CA27B9D91BDC4BFA001F3202 /* MapViewController.swift in Sources */,
 				C32C0EAD1BDB68C7005F3A8D /* ViewController.swift in Sources */,
 				CA27B9C11BDBFFA9001F3202 /* TableViewCell.swift in Sources */,
 				C32C0EB31BDB68C7005F3A8D /* Happening.xcdatamodeld in Sources */,

@@ -18,6 +18,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     @IBOutlet weak var ideaStatus: UISwitch!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var activeStatus: UISwitch!
+    @IBOutlet weak var doneButton: UIButton!
     
     var objects = [String]()
     
