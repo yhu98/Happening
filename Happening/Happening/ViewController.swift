@@ -13,10 +13,12 @@ import ParseUI
 class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate  {
 
 
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var interestsTableView: UITableView!
     @IBOutlet weak var ideaStatus: UISwitch!
+    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var activeStatus: UISwitch!
-    @IBOutlet weak var profileImage: UIImageView!
+    
     var objects = [String]()
     
     
@@ -51,7 +53,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         self.presentViewController(logInController, animated:true, completion: nil)
     }
     
-    @IBAction func didToggleStatusSwitch(sender: UISwitch) {
+    @IBAction func didToggleActiveSwitch(sender: UISwitch) {
         if sender.on == true {
             PFUser.currentUser()?.setObject(true, forKey: "activeStatus")
             print("turn on")
@@ -104,6 +106,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
         self.dismissViewControllerAnimated(true, completion: nil)
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -137,7 +140,40 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let aCell = self.interestsTableView.dequeueReusableCellWithIdentifier("interestsCell", forIndexPath: indexPath) as! TableViewCell
+        
         aCell.interestsLabel.text = self.objects[indexPath.row]
+        
+        let redimage : UIImage = UIImage(named:"Interest_Red.png")!
+        let aquaimage : UIImage = UIImage(named:"Interest_Aqua.png")!
+        let greenimage : UIImage = UIImage(named:"Interest_Green.png")!        
+        let orangeimage : UIImage = UIImage(named:"Interest_Orange.png")!
+        let purpleimage : UIImage = UIImage(named:"Interest_purple.png")!
+        
+        print("row: \(indexPath.row) ")
+        print("The loaded image: \(redimage)")
+        
+        switch(indexPath.row) {
+            case 0:
+                
+                aCell.iconView.image = redimage
+                break
+            case 1:
+                aCell.iconView.image = aquaimage
+                break
+            case 2:
+                aCell.iconView.image = greenimage
+                break
+            case 3:
+                aCell.iconView.image = orangeimage
+                break
+            case 4:
+                aCell.iconView.image = purpleimage
+                break
+        default: aCell.iconView.image = redimage
+                break
+            
+        }
+        
         return aCell
     }
 
